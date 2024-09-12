@@ -1,13 +1,18 @@
 .gallery {
   display: flex;
-  padding: 24px 156px;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
   gap: 24px;
+  padding: 24px 156px;
+  list-style-type: none;
 }
 
 .gallery-image {
   display: block;
-  max-width: 360px;
+  transition: transform 0.5s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
 }
