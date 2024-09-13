@@ -6,6 +6,8 @@
   gap: 24px;
   padding: 24px 156px;
   list-style-type: none;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .gallery-image {
