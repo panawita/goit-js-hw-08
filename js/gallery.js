@@ -79,8 +79,6 @@ images.forEach((image) => {
   img.src = image.preview;
   img.alt = image.description;
   img.setAttribute("data-source", image.original);
-  img.height = 200;
-  img.width = 360;
 
   link.appendChild(img);
   listItem.appendChild(link);
