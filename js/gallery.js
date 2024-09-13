@@ -97,5 +97,12 @@ gallery.addEventListener("click", (event) => {
     <img src="${originalImageUrl}">
 `);
     instance.show();
+
+    const closeModal = (event) => {
+      if (event.key === "Escape") {
+        instance.close();
+      }
+    };
+    document.addEventListener("keydown", closeModal);
   }
 });
