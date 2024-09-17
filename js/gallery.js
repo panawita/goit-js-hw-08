@@ -91,23 +91,20 @@ gallery.addEventListener("click", (event) => {
   if (event.target.classList.contains("gallery-image")) {
     const originalImageUrl = event.target.getAttribute("data-source");
     console.log("Original image link:", originalImageUrl);
-    const instance = basicLightbox.create(
-      `
-    <img src="${originalImageUrl}">`,
-      {
-        onClose: () => {
-          document.removeEventListener("keydown", closeModal);
-        },
-      }
-    );
-
-    instance.show();
 
     const closeModal = (event) => {
       if (event.key === "Escape") {
         instance.close();
       }
     };
+
+    const instance = basicLightbox.create(`<img src="${originalImageUrl}">`, {
+      onClose: () => {
+        document.removeEventListener("keydown", closeModal);
+      },
+    });
+
+    instance.show();
 
     document.addEventListener("keydown", closeModal);
   }
